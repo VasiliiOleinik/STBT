@@ -1,0 +1,219 @@
+.courses
+{
+  background-image: url("../img/bg_service.png");
+
+}
+
+
+.courses__blocks
+{
+  width: 1150px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 90px;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+  top: 90px;
+
+}
+
+.course
+{
+  width: 370px;
+  height: 390px;
+  border-bottom: 1px solid #426177;
+  padding-top: 30px;
+
+}
+
+
+.course:nth-child(1)
+{
+  border-right: 1px solid #426177;
+}
+
+.course:nth-child(3)
+{
+  border-left: 1px solid #426177;
+}
+
+.course:nth-child(4)
+{
+  border-right: 1px solid #426177;
+  border-bottom: none;
+}
+
+.course:nth-child(5)
+{
+  border-bottom: none;
+}
+
+.course:nth-child(6)
+{
+  border-left: 1px solid #426177;
+  border-bottom: none;
+}
+
+.course__img {
+    text-align: center;
+    height: 130px;
+    padding-bottom: 20px;
+}
+
+.course__title
+{
+  width: 240px;
+  font-family: "ExoTwo-Bold";
+  font-size: 20px;
+  color: #2c5f76;
+  text-align: center;
+  margin: 0 auto;
+}
+
+
+
+.course__price
+{
+  font-family: "ExoTwo-Bold";
+  font-size: 27px;
+  color: #000;
+  text-align: center;
+}
+
+.course__lastPrice
+{
+  font-family: "ExoTwo-Light";
+  font-size: 18px;
+  color: #444444;
+  text-decoration: line-through;
+  text-align: center;
+}
+
+.course__button
+{
+  width: 180px;
+  background: transparent;
+  border: 2px solid #fcd149;
+  border-radius: 14px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  font-family: "ExoTwo-Bold";
+  font-size: 12px;
+  color: #9c9c9c;
+  text-transform: uppercase;
+  margin-left: 105px;
+  margin-top: -5px;
+  cursor: pointer;
+}
+
+.course__button:hover
+{
+  background-color: #fcd149;
+  color: #fff;
+}
+
+
+.course__button:active
+{
+  background-color: #fcd149;
+  color: #fff;
+}
+
+.courses__description
+{
+  font-family: "ExoTwo-Bold";
+  font-size: 20px;
+  color: #2c5f76;
+  text-align: center;
+  margin-top: 130px;
+  margin-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+  .courses__blocks
+  {
+    width: 768px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 90px;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    top: 90px;
+
+  }
+
+  .course--electro {
+
+    position: relative;
+    bottom: 20px;
+  }
+
+  .course--prom {
+
+    bottom: 41px;
+    position: relative;
+    padding-top: 72px;
+  }
+
+  .course--prom .course__img
+  {
+    position: relative;
+    right: 10px;
+  }
+
+  .course--prom .course__title
+  {
+    position: relative;
+    right: 10px;
+  }
+
+  .course--height
+  {
+    position: relative;
+    bottom: 52px;
+  }
+
+  .course--prof
+  {
+    position: relative;
+    bottom: 40px;
+  }
+
+.course:nth-child(1)
+{
+  border-right: 1px solid #426177;
+}
+
+.course:nth-child(3)
+{
+  border-right: 1px solid #426177;
+  border-left: none;
+}
+
+.course:nth-child(4)
+{
+  border-bottom: 1px solid #426177;
+  border-right: none;
+}
+
+.course:nth-child(5)
+{
+  border-bottom: none;
+}
+
+.course:nth-child(6)
+{
+  border-left: 1px solid #426177;
+  border-bottom: none;
+}
+
+}

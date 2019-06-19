@@ -1,0 +1,466 @@
+.main-section
+{
+  background-image: url("../img/main_bg.png");
+  background-position-y: -50px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  background-size: cover;
+}
+
+.main_content
+{
+  height: 700px;
+  z-index: 998;
+}
+
+.main-section__top
+{
+  margin-bottom: 20px;
+}
+
+.main-section__low
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 1100px;
+}
+.logo
+{
+  margin-bottom: 20px;
+}
+
+.table{
+  width:70%;
+  height:240px;
+  position: relative;
+  margin-bottom: 200px;
+  margin-left: -25px;
+}
+
+.table td span
+{
+  font-family: "ExoTwo-Light";
+  font-size: 15px;
+  line-height: 18px;
+  color: #4d4d4d;
+}
+
+.a{
+  width: 50%;
+  height: 125px;
+  background:#fff;
+  border-right: 2px solid #cdcece;
+  border-bottom: 2px solid #cdcece;
+}
+
+.a span
+{
+  display: block;
+  width: 105px;
+  margin-left: 25px;
+  margin-top: 17px;
+
+}
+
+.a img
+{
+  position: relative;
+  left: 80%;
+}
+
+.b{
+  width: 25%;
+  height: 122px;
+  background:#fff;
+  border-right: 2px solid #cdcece;
+  border-bottom: 2px solid #cdcece;
+}
+
+.b span
+{
+  display: block;
+  width: 105px;
+  margin-left: 10px;
+  margin-top: 15px;
+
+}
+
+.b img
+{
+  position: relative;
+  left: 70%;
+}
+.c{
+  width: 25%;
+  height: 122px;
+  background:#fff;
+  border-bottom: 2px solid #cdcece;
+}
+
+.c span
+{
+  display: block;
+  width: 55px;
+  margin-left: 4px;
+  margin-top: 15px;
+
+}
+
+.c img
+{
+  position: relative;
+  left:70%;
+}
+
+.d{
+  width: 25%;
+  height: 122px;
+  background:#fff;
+  border-right: 2px solid #cdcece;
+}
+
+.d span
+{
+  display: block;
+  width: 105px;
+  margin-left: 20px;
+  margin-top: -20px;
+
+}
+
+.d img
+{
+  position: relative;
+  left: 70%;
+}
+.e{
+  width: 25%;
+  height: 122px;
+  background:#fff;
+  border-right: 2px solid #cdcece;
+}
+
+.e span
+{
+  display: block;
+  width: 105px;
+  margin-left: 15px;
+}
+.e img
+{
+  position: relative;
+  left: 70%;
+
+}
+
+.f{
+  width: 25%;
+  height: 122px;
+  background:#fff;
+  border-right: 2px solid #cdcece;
+}
+
+.f span
+{
+  display: block;
+  width: 105px;
+  margin-left: 10px;
+  margin-top: -25px;
+
+}
+.f img
+{
+  position: relative;
+  left: 70%;
+  top: 5px;
+}
+
+.g{
+  width: 25%;
+  height: 122px;
+  background:#fff;
+}
+
+.g span
+{
+  display: block;
+  width: 105px;
+  margin-top: -28px;
+  margin-left: 10px;
+}
+.g img
+{
+  position: relative;
+  left: 70%;
+  top: 3px;
+}
+
+.main-description
+{
+  width: 250px;
+}
+
+.main-description__title
+{
+  font-family: "ExoTwo-Bold";
+  font-size: 20px;
+  line-height: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 55px;
+}
+
+
+.main-description__button
+{
+  width: 175px;
+  background: transparent;
+  border: 2px solid #fcd149;
+  border-radius: 14px;
+  padding-top: 17px;
+  padding-bottom: 21px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: "ExoTwo-Bold";
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-description__button a
+{
+  text-decoration: none;
+  color: #fff;
+}
+
+.main-description__button:hover
+{
+background-color: #fcd149;
+color: #fff;
+cursor: pointer;
+}
+
+.main-description__button:active
+{
+background-color: #fcd149;
+color: #fff;
+cursor: pointer;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+
+  b{
+    width: 25%;
+    height: 122px;
+    background:#fff;
+    border-right: 2px solid #cdcece;
+    border-bottom: 2px solid #cdcece;
+  }
+
+  .b span
+  {
+    display: block;
+    width: 105px;
+    margin-left: 10px;
+    margin-top: 15px;
+
+  }
+
+  .b img
+  {
+    position: relative;
+    left: 67%;
+  }
+  .c{
+    width: 25%;
+    height: 122px;
+    background:#fff;
+    border-bottom: 2px solid #cdcece;
+  }
+
+  .c span
+  {
+    display: block;
+    width: 55px;
+    margin-left: 4px;
+    margin-top: 15px;
+
+  }
+
+  .c img
+  {
+    position: relative;
+    left:70%;
+  }
+
+  .d{
+    width: 25%;
+    height: 122px;
+    background:#fff;
+    border-right: 2px solid #cdcece;
+  }
+
+  .d span
+  {
+    display: block;
+    width: 105px;
+    margin-left: 20px;
+    margin-top: -20px;
+
+  }
+
+  .d img
+  {
+    position: relative;
+    left: 70%;
+  }
+  .e{
+    width: 25%;
+    height: 122px;
+    background:#fff;
+    border-right: 2px solid #cdcece;
+  }
+
+  .e span
+  {
+    display: block;
+    width: 105px;
+    margin-left: 15px;
+  }
+  .e img
+  {
+    position: relative;
+    left: 70%;
+    bottom: 5px;
+  }
+
+  .f{
+    width: 25%;
+    height: 122px;
+    background:#fff;
+    border-right: 2px solid #cdcece;
+  }
+
+  .f span
+  {
+    display: block;
+    width: 105px;
+    margin-left: 10px;
+    margin-top: -25px;
+
+  }
+  .f img
+  {
+    position: relative;
+    left: 70%;
+    top: 5px;
+  }
+
+  .g{
+    width: 25%;
+    height: 122px;
+    background:#fff;
+  }
+
+  .g span
+  {
+    display: block;
+    width: 105px;
+    margin-top: -28px;
+    margin-left: 10px;
+  }
+  .g img
+  {
+    position: relative;
+    left: 60%;
+    top: 10px;
+  }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+  .main-section
+  {
+    padding-bottom: 100px;
+  }
+
+  .logo {
+
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+  .main_content {
+    height: 700px;
+    z-index: 998;
+    width: 90%;
+}
+
+  .main-section__low
+  {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 90%;
+  }
+
+  .table {
+
+    width: 100%;
+    height: 240px;
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 0px;
+
+}
+
+  .main-description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.main-description__title {
+
+    font-family: "ExoTwo-Bold";
+    font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    padding-bottom: 0px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+
+}
+.main-description__button {
+    width: 175px;
+    background: transparent;
+    border: 2px solid #fcd149;
+    border-radius: 14px;
+    padding-top: 17px;
+    padding-bottom: 21px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: "ExoTwo-Bold";
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    height: 70px;
+    margin: 0 auto;
+}
+}

@@ -1,0 +1,105 @@
+.clients
+{
+  height: 278px;
+  background-color: #525252;
+
+}
+
+.clients__list
+{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  position: relative;
+  top: 50px;
+  justify-content: space-around;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.clients__item
+{
+  width: 200px;
+  height: 200px;
+}
+
+.clients_img
+{
+  height: 115px;
+  text-align: center;
+}
+
+.clients_img--culture img
+{
+  padding-top: 30px;
+}
+
+.clients__description
+{
+  font-family: "ExoTwo-Light";
+  font-size: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 960px) and (max-width: 1200px) {
+
+  .clients__list
+  {
+    width: 90%;
+  }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+
+  .clients
+  {
+    height: auto;
+    background-color: #525252;
+
+  }
+
+  .clients__list
+  {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    position: relative;
+    top: 50px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 60px;
+  }
+
+    .clients__item
+    {
+      width: 250px;
+      height: 200px;
+    }
+
+    .clients_img
+    {
+      height: 115px;
+      text-align: center;
+    }
+
+    .clients_img--culture img
+    {
+      padding-top: 30px;
+    }
+
+  .clients__description
+  {
+    font-family: "ExoTwo-Light";
+    font-size: 15px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+
+}

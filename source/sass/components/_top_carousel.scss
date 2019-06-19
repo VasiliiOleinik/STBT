@@ -1,0 +1,113 @@
+
+
+.top_carousel-wrapper{
+  height:400px;
+  position:relative;
+  width:80%;
+  margin-left: 30px;
+}
+.top_carousel-item{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:25px 50px;
+  opacity:0;
+  transition: all 0.5s ease-in-out;
+}
+.top_carousel-wrapper .arrow{
+  border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.top_carousel-wrapper .arrow-prev{
+  left: 50px;
+  position: absolute;
+  top: 60%;
+  -webkit-transform: translateY(-50%) rotate(135deg);
+  transform: translateY(-50%) rotate(135deg);
+}
+
+.top_carousel-wrapper .arrow-next{
+  right: -130px;
+  position: absolute;
+  top: 61%;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
+  }
+
+.light{
+  color:white;
+}
+
+@media (max-width: 480px) {
+      .top_carousel-wrapper.arrow, .light .top_carousel-wrapper .arrow {
+        background-size: 10px;
+        background-position: 10px 50%;
+      }
+    }
+
+/*Select every element*/
+[id^="item"] {
+    display: none;
+  }
+
+  .item-4 {
+    z-index: 2;
+    opacity: 1;
+    background:inherit;
+  background-size:cover;
+  }
+  .item-5{
+    background:inherit;
+   background-size:cover;
+}
+  .item-6{
+  background:inherit;
+   background-size:cover;
+}
+
+*:target ~ .top_carousel-item .item-4 {
+    opacity: 0;
+  }
+
+ #item-4:target ~ .item-4 {
+    opacity: 1;
+  }
+
+ #item-5:target ~ .item-5, #item-6:target ~ .item-6 {
+    z-index: 3;
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 1440px) and (max-width: 1600px) {
+
+    .top_carousel-wrapper .arrow-next {
+   right: -100px;
+ }
+
+
+  }
+
+  @media screen and (min-width: 1280px) and (max-width: 1439px) {
+
+
+    .top_carousel-wrapper .arrow-next {
+   right: -70px;
+ }
+
+
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+
+
+    .top_carousel-wrapper .arrow-next {
+   right: 10px;
+ }
+
+
+  }

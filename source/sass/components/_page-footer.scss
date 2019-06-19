@@ -1,0 +1,73 @@
+
+.page-footer
+{
+  background-color: #525252;
+  margin-top: -35px;
+}
+.information
+{
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.information p
+{
+  font-family: "ExoTwo-Regular";
+  font-size: 15px;
+  color: #fff;
+}
+
+.information__about
+{
+  width: 400px;
+}
+
+.information__address
+{
+  width: 280px;
+  position: relative;
+  bottom: 5px;
+  right: 15px;
+}
+
+.information__phone
+{
+  width: 150px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+
+    .information p
+    {
+      font-family: "ExoTwo-Regular";
+      font-size: 14px;
+      color: #fff;
+    }
+
+
+    .information__about
+    {
+      width: 250px;
+    }
+
+    .information__address
+    {
+      width: 200px;
+      position: relative;
+      bottom: 0px;
+      right: 0px;
+    }
+
+    .information__phone
+    {
+      width: 120px;
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+}

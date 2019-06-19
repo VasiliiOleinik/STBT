@@ -1,0 +1,432 @@
+#modal_1, #modal_2, #modal_3 {
+  position: absolute;
+  display:none;
+  width: 675px;
+  height: 265px;
+  left: 0%;
+  top: 0;
+  z-index: 1;
+  background: #2d5f77;
+  transition: right 1s 1s;
+  margin-top: 30px;
+  z-index: 998;
+
+}
+#modal_2
+{
+  background: #929496;
+}
+
+#modal_1.active, #modal_3.active {
+  left: 0px;
+  top: 0px;
+  transition: left 2s;
+  position: absolute;
+  margin-top: 30px;
+  z-index: 999;
+  display: block;
+}
+
+#modal_2.active
+{
+  left: 0px;
+  top: 0;
+  margin-top: 30px;
+  transition: left 2s;
+ position: absolute;
+ z-index: 999;
+ display: block;
+
+}
+
+ #modalButton_1, #modalButton_2, #modalButton_3
+ {
+   background: none;
+   border: none;
+   background-color: inherit;
+   margin-right: 10px;
+ }
+
+ #modalButton_2
+ {
+    margin-top: 30px;
+ }
+
+ .modal_inner__text {
+
+    font-family: "ExoTwo-Regular";
+    font-size: 15px;
+    line-height: 20px;
+    color: #fff;
+    width: 520px;
+    margin: 0 auto;
+    padding-top: 0px;
+
+}
+
+.modal_inner__img
+{
+  position: relative;
+  bottom: 0px;
+  padding-left: 80px;
+  margin: 0;
+  padding-bottom: 10px;
+
+}
+
+.open_block
+{
+  background: none;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.close-menu
+{
+  background: none;
+  border: none;
+  background-color: inherit;
+  margin-left: 0%;
+  position: relative;
+  top:10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+
+/* Контейнер */
+.modal {
+
+/* Слой перекрытия */
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background: rgba(0,0,0,0.5);
+z-index: 10000;
+
+/* Трансформации прозрачности при открытии  */
+-webkit-transition: opacity 500ms ease-in;
+-moz-transition: opacity 500ms ease-in;
+transition: opacity 500ms ease-in;
+
+/* Скрываем изначально */
+opacity: 0;
+pointer-events: none;
+}
+
+/* Показываем модальное окно */
+.modal:target {
+opacity: 1;
+pointer-events: auto;
+}
+
+/* Содержание */
+.modal > div {
+width: 586px;
+height: auto;
+background: #ffffff;
+position: relative;
+margin: 10% auto;
+margin-top: 6%;
+
+/* По умолчанию минимизируем анимацию */
+-webkit-animation: minimise 500ms linear;
+
+/* Придаем хороший вид */
+padding: 30px;
+-moz-border-radius: 7px;
+border-radius: 7px;
+-webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+-moz-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+text-shadow: 0 1px 0 #fff;
+}
+
+/* Изменяем анимацию при открытии модального окна*/
+.modal:target > div {
+-webkit-animation-name: bounce;
+}
+
+.modal h2 {
+font-size: 36px;
+padding: 0 0 20px;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+  	-webkit-transform: scale3d(0.1,0.1,1);
+  	-webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+  55% {
+  	-webkit-transform: scale3d(1.08,1.08,1);
+  	-webkit-box-shadow: 0 10px 20px rgba(0,0,0,0);
+  }
+  75% {
+  	-webkit-transform: scale3d(0.95,0.95,1);
+  	-webkit-box-shadow: 0 0 20px rgba(0,0,0,0.9);
+  }
+  100% {
+  	-webkit-transform: scale3d(1,1,1);
+  	-webkit-box-shadow: 0 3px 20px rgba(0,0,0,0.9);
+  }
+}
+
+@-webkit-keyframes minimise {
+  0% {
+  	-webkit-transform: scale3d(1,1,1);
+  }
+  100% {
+  	-webkit-transform: scale3d(0.1,0.1,1);
+  }
+}
+
+/* Ссылка на кнопку Закрыть */
+.modal a[href="#close"] {
+position: absolute;
+right: 20px;
+top: 20px;
+color: transparent;
+}
+
+/* Center modal */
+
+.modal_text
+{
+  font-family: "ExoTwo-Regular";
+  font-size: 15px;
+  line-height: 20px;
+}
+
+/* Section modal */
+
+.modal_section
+{
+  position: relative;
+  top: 65px;
+  right: 20px;
+}
+
+.modal_section__center
+{
+  position: relative;
+  top: 82px;
+  right: 20px;
+}
+
+.section_modal .modal > div {
+  width: 620px;
+  height: auto;
+  background: #2d5f77;
+  position: relative;
+  margin: 10% auto;
+  margin-top: 18%;
+  -webkit-animation: minimise 500ms linear;
+  padding: 30px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  text-shadow: none;
+  margin-left: 33%;
+}
+
+.section_modal--center .modal > div {
+  background: #929496;
+}
+
+
+.section_modal .modal_text
+{
+  font-family: "ExoTwo-Regular";
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+}
+
+/* Callback modal */
+
+.callback_modal .modal > div {
+  width: 450px;
+  height: auto;
+  background: #e9bc4e;
+  position: relative;
+  margin: 10% auto;
+  -webkit-animation: minimise 500ms linear;
+  padding: 30px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+  text-shadow: none;
+  margin-left: 39%;
+}
+
+.callback_text p
+{
+  font-family: "ExoTwo-Regular";
+  font-size: 16px;
+  line-height: 22px;
+  color: #000;
+}
+
+#backPhone
+{
+  display: flex;
+  flex-direction: column;
+}
+
+#telForm
+{
+  width: 200px;
+  margin: 0 auto;
+}
+
+#telButton
+{
+  width: 150px;
+  margin: 0 auto;
+  height: 30px;
+  border-radius: 3px;
+  border: none;
+  background-color: #000;
+  margin-top: 10px;
+  font-family: "ExoTwo-Regular";
+  font-size: 15px;
+  line-height: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+@media screen and (min-width:1440px) and (max-width: 1600px) {
+
+  #modal_1.active, #modal_3.active
+  {
+    left: 0px;
+    top: 0;
+    margin-top: 30px;
+    -webkit-transition: right 1s;
+    transition: left 2s;
+   position: absolute;
+
+  }
+
+ #modal_2.active
+ {
+   left: 0px;
+   top: 0;
+   margin-top: 30px;
+   -webkit-transition: right 1s;
+   transition: left 2s;
+  position: absolute;
+
+ }
+}
+
+@media screen and (min-width:1280px) and (max-width: 1439px) {
+
+#modal_1.active, #modal_3.active {
+  left: 0px;
+  top: 0;
+  margin-top: 30px;
+  -webkit-transition: right 1s;
+  transition: left 2s;
+  position: absolute;
+}
+
+ #modal_2.active
+ {
+   left: 0px;
+   top: 0;
+   margin-top: 30px;
+   -webkit-transition: right 1s;
+   transition: left 2s;
+  position: absolute;
+
+ }
+}
+
+@media screen and (min-width:768px) and (max-width: 1279px) {
+
+  .section_modal .modal > div {
+    width: 620px;
+    height: auto;
+    background: #2d5f77;
+    position: relative;
+    margin: 10% auto;
+    margin-top: 18%;
+    -webkit-animation: minimise 500ms linear;
+    padding: 30px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+    text-shadow: none;
+  }
+
+  .callback_modal .modal > div {
+    width: 450px;
+    height: auto;
+    background: #e9bc4e;
+    position: relative;
+    margin: 10% auto;
+    margin-top: 30%;
+    -webkit-animation: minimise 500ms linear;
+    padding: 30px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.9);
+    text-shadow: none;
+  }
+
+  #modal_10, #modal_20, #modal_30 {
+    position: absolute;
+    display:none;
+    width: 615px;
+    height: 265px;
+    left: 0%;
+    top: 0;
+    z-index: 1;
+    background: #2d5f77;
+    transition: right 1s 1s;
+  }
+  #modal_20
+  {
+    background: #929496;
+  }
+
+  #modal_10.active, #modal_30.active {
+    left: 0px;
+    top: 0px;
+    transition: left 2s;
+    position: absolute;
+    margin-top: 30px;
+    z-index: 999;
+    display: block;
+  }
+
+   #modal_20.active
+   {
+     left: 0px;
+     top: 0;
+     margin-top: 30px;
+     transition: left 2s;
+    position: absolute;
+    z-index: 999;
+    display: block;
+
+   }
+
+   #modalButton_10, #modalButton_20, #modalButton_30
+   {
+     background: none;
+     border: none;
+     background-color: inherit;
+     margin-right: 10px;
+   }
+
+   #modalButton_20
+   {
+      margin-top: 30px;
+   }
+}

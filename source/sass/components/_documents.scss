@@ -1,0 +1,126 @@
+.documents
+{
+  display: flex;
+  background-color: #ededed;
+  flex-direction: row;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.law
+{
+  width: 480px;
+  margin-top: -80px;
+}
+
+.law__title
+{
+  width: 280px;
+  font-family: "ExoTwo-Regular";
+  font-size: 20px;
+  color: #444444;
+  position: relative;
+  bottom: 10px;
+  right: 2px;
+}
+
+.law__description
+{
+  width: 510px;
+  font-family: "ExoTwo-Light";
+  font-size: 15px;
+  color: #444444;
+  position: relative;
+  bottom: 13px;
+  right: 2px;
+}
+
+.news
+{
+  width: 410px;
+  margin-left: 102px;
+  margin-top: 30px;
+}
+
+.news__blog:nth-child(3)
+{
+  margin-top: -15px;
+}
+
+.news__blog::after
+{
+  content: "";
+  position: absolute;
+  width: 155px;
+  height: 2px;
+  background-image: url("../img/line.png");
+  margin-top: -30px;
+}
+
+.news__blog:nth-child(4)
+{
+  margin-top: -20px;
+}
+
+
+.news__titles
+{
+  width: 280px;
+  font-family: "ExoTwo-Regular";
+  font-size: 20px;
+  color: #444444;
+  position: relative;
+  bottom: 10px;
+  right: 2px;
+}
+
+.news__data
+{
+  font-family: "ExoTwo-Bold";
+  font-size: 20px;
+  color: #000;
+}
+
+.news__title
+{
+  font-family: "ExoTwo-Regular";
+  font-size: 15px;
+  color: #2c2c2c;
+  position: relative;
+  bottom: 17px;
+}
+
+.news__description
+{
+  font-family: "ExoTwo-Light";
+  font-size: 15px;
+  color: #2c2c2c;
+  position: relative;
+  bottom: 35px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .documents
+  {
+    padding-top: 30px;
+  }
+
+  .law {
+    width: 40%;
+    margin-top: 0px;
+    padding-right: 30px;
+}
+
+.law__description
+{
+  width: auto;
+}
+
+.news {
+    width: 40%;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+}

@@ -1,0 +1,55 @@
+input[type="radio"] { display: none; }
+
+input[type="radio"]:checked + section { display: block; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: lighter;
+}
+
+.card_slider_container {
+    position:absolute;
+    left: 50%;
+    margin-left: -108px;
+    top: 50%;
+    margin-top: -35px;
+    width: 216px;
+    height: 80px;
+}
+
+.card_slider_container section {
+  display: none;
+  height: 100%;
+  padding: 15px;
+  padding-top: 5px;
+  background: #449df5;
+  color: #fff;
+  text-align: center;
+}
+
+.card_slider_container section p
+{
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.card_slider_container section label {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1.5em;
+  bottom: 0;
+}
+
+.card_slider_container section label:nth-child(odd){ right: 80px;
+bottom: 80px; }
+
+.card_slider_container section label:nth-child(even), {left: 80px;
+bottom: 80px; }
+
+.card_slider_container section > i {
+  font-size: 6em !important;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
