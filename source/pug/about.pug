@@ -1,6 +1,84 @@
 extends blocks/_layout
 
 append content
+  -
+    var ac1 = [
+      {
+          number: "1",
+          descr: "Введение. Законодательная база в области пожарной безопасности",
+          hours: "2,0"
+      },
+      {
+          number: "2",
+          descr: "Пожарная опасность в организации",
+          hours: "2,0"
+      },
+            {
+          number: "3",
+          descr: "Пожарная опасность в организации",
+          hours: "2,0"
+      },
+            {
+          number: "4",
+          descr: "Пожарная опасность в организации",
+          hours: "2,0"
+      },
+            {
+          number: "5",
+          descr: "Пожарная опасность в организации",
+          hours: "2,0"
+      },
+            {
+          number: "6",
+          descr: "Пожарная опасность в организации",
+          hours: "2,0"
+      },
+            {
+          number: "7",
+          descr: "Пожарная опасность в организации",
+          hours: "2,0"
+      },
+            {
+          number: "8",
+          descr: "Пожарная опасность в организации",
+          hours: "2,0"
+      },
+            {
+          number: "9",
+          descr: "Пожарная опасность в организации",
+          hours: "2,0"
+      },
+            {
+          number: "10",
+          descr: "Введение. Законодательная база в области пожарной безопасности",
+          hours: "2,0"
+      },
+            {
+          number: "11",
+          descr: "Введение. Законодательная база в области пожарной безопасности",
+          hours: "2,0"
+      },
+            {
+          number: "12",
+          descr: "Введение. Законодательная база в области пожарной безопасности",
+          hours: "2,0"
+      },
+            {
+          number: "13",
+          descr: "Введение. Законодательная база в области пожарной безопасности",
+          hours: "2,0"
+      },
+            {
+          number: "14",
+          descr: "Введение. Законодательная база в области пожарной безопасности",
+          hours: "2,0"
+      },
+            {
+          number: "15",
+          descr: "Введение. Законодательная база в области пожарной безопасности",
+          hours: "2,0"
+      },
+    ];
 
   main
     .top_block(class="container")
@@ -17,6 +95,201 @@ append content
         .main_section__tablet
           .main_section
             h1.main_section__title Обучение по промышленной безопасности в Тюмени
+            .main_section__center
+              p.main_section__description
+                |Любая современная организация, согласно законодательству, обязана обучить безопасному труду всех своих работников,
+                | и сделать это нужно в течение 1 месяца после их трудоустройства.
+              .center_modal
+                .modal_click
+                  a(class="button openModal" href="#modal")
+                    img(src="img/modal_click.png" alt="")
+                  #modal(class="modal")
+                    div
+                      .text
+                        img(src="img/text_click.png" alt="")
+                        p.modal_text 
+                          |По статистике, уровень производственного травматизма на предприятиях высок, поэтому вопрос охраны труда как никогда актуален:
+                          | в каждом учреждении должна быть создана здоровая рабочая среда. При этом забота о безопасности персонала – обязанность не только
+                          | руководителей или работодателей (индивидуальных предпринимателей), но и самих сотрудников организаций.
+                      a(href="#close" title="Закрыть")
+                        img(src="img/close_icon.png" alt="")
+                .modal_document
+                  a(class="button openModal" href="#modal-2")
+                    img(src="img/modal_document.png" alt="")
+                  #modal-2(class="modal")
+                    div
+                      .text
+                        img(src="img/text_document.png" alt="")
+                        p.modal_text
+                          |Обучение охране труда регламентируется постановлением № 1/29 и статьей 197 ТК РФ о праве работников на подготовку и дополнительное профессиональное образовани
+                      a(href="#close" title="Закрыть")
+                        img(src="img/close_icon.png" alt="")
+            .main_desktop
+              .main_section__block
+                .section_left
+                  img(src="img/section_left_icon.png" alt="")
+                  h3.section_title Законодательство
+                  .section_description
+                    p.section_text
+                      span 4
+                      |документа
+                    button#modalButton_1
+                      img(src="img/section_block_open.png" alt="")
+                    .openWindow.active(id="modal_1")
+                      button.close-menu
+                        img(src="img/modal_icon_close.png" alt="")
+                      .modal_inner__img
+                        img(src="img/section_left_big_icon.png" alt="")
+                      p.modal_inner__text
+                        |В соответствии со статистикой Роструда, около 50 % штрафов при проверках предприятий – это административная ответственность за
+                        | нарушения именно в области охраны труда, а все потому что специалисты вовремя не прошли обучающий курс. Согласно ст. 5.27 КоаАП РФ,
+                        | размер суммы за несоблюдение законодательства может составить от 30 до 50 тысяч рублей. Также инспекция имеет право приостановить
+                        | деятельность организации сроком на 3 месяца (90 суток). Возможные финансовые потери в результате применения данной меры каждый директор и предприниматель может подсчитать сам.
+
+                .section_center
+                  img(src="img/section_center_icon.png" alt="")
+                  h3.section_title Форма обучения
+                  .section_description.section_description--center
+                    .section_list
+                      p.ection_item.section_item--top Очная
+                      p.section_item.section_item--center Выездная
+                      p.section_item.section_item--bottom Дистанционная
+                    button#modalButton_2
+                      img(src="img/section_block_open.png" alt="")
+                    #modal_2
+                      button.close-menu 
+                        img(src="img/modal_icon_close.png" alt="")
+                      .modal_inner__img
+                        img(src="img/section_center_big_icon.png" alt="")
+                        p.modal_inner__text 
+                          |Специалисты центра проведут занятия в удобной для вас форме: очной (в учебных классах), выездной
+                          | (на Вашей территории) и дистанционной (без отрыва от основной деятельности). При дистанционной форме обучения можно организовывать
+                          | видеоконференции между преподавателями и обучающимися. Лекции, тесты, нормативно-технические документы и т.д. будут круглосуточно
+                          | доступны работнику в личном кабинете. Там же в удобный день и час он сможет пройти тестирование.
+                .section_right
+                  img(src="img/section_right_icon.png" alt="")
+                  h3.section_title Периодичность
+                  .section_description
+                    p.section_text
+                      span 3
+                      |года
+                    button#modalButton_3
+                      img(src="img/section_block_open.png" alt="")
+                    #modal_3
+                      button.close-menu
+                        img(src="img/modal_icon_close.png" alt="")
+                      .modal_inner__img
+                        img(src="img/section_right_big_icon.png" alt="")
+                        p.modal_inner__text
+                          |Чтобы избежать неприятностей, рекомендуем всем руководителям и специалистам предприятий своевременно пройти обучение
+                          | по охране труда в нашем лицензированном учебном центре. По окончании мы вручаем удостоверение установленного образца,
+                          | подтверждающее факт успешного прохождения курса. Этот документ действует определенный срок: проходить обучение и проверку знаний 
+                          |и требований в области охраны труда полагается не реже 1 раза в 3 года.
+              .main_callback
+                .main_callback__all
+                  .callback_img
+                    img(src="img/callback_icon.png" alt="")
+                  .callback_description
+                    p.callback_text
+                      |Мы поможем определиться с учебной программой, чтобы вы в короткий срок получили
+                      | необходимые знания и документы по окончании обучающих курсов в области «Охраны труда».
+                    .callback_modal
+                      a(class="button openModal" href="#modal-7")
+                        img(src="img/modal_callback_icon.png" alt="")
+                      #modal-7(class="modal")
+                        div
+                          .callback_text
+                            p Получить дополнительную информацию по курсам
+                              form#backPhone(name="backPhone")
+                                input(id="telForm" name="telephone" type="Tel" maxlength="20" placeholder="Введите ваш телефон" required="”required”")
+                                button#telButton(type="submit" form="backPhone") Заказать звонок
+                              a(href="#close" title="Закрыть")
+                                img(src="img/modal_icon_close.png" alt="")
+              .professional_block
+                h3.professional_title
+                  span Р.1. 
+                  | Профессиональная подготовка рабочих
+                .professional_description
+                  h5.professional_description__title
+                    | Р.1.2. Машинист подъемника (5 разряд)
+                  .describe_block
+                    p.describe_hours Количество часов 
+                      span 18
+                    p.describe_student Количество слушателей 
+                      span 30 
+                    p.describe_price
+                      img(src="img/icon_basket.png" alt="") 
+                      span 7500 руб. 
+                  .modal_bottom
+                    button.modal_open(onclick="modalOpen()")
+                      img(src="img/see_icon.png" alt="")
+                    .block
+                      .modal_top
+                        button.modal_close(onclick="modalClose()")
+                          img(src="img/modal_icon_close.png" alt="")
+                        nav.breadcrumbs
+                          ul.breadcrumbs_list
+                            li.breadcrumbs_item Обучение по охране труда
+                            li.breadcrumbs_item &gt;
+                            li.breadcrumbs_item 0. Охрана труда
+                      .modal_info
+                        .modal_info__left 
+                          p.odal_info__description Обучение работе населения в области гражданской обороны и защиты от чрезвычайных ситуаций природного и технгенного характера
+                        .modal_info__right
+                          p.modal_info__about.modal_info__about--hours Количество часов 
+                            span 18
+                          p.modal_info__about.modal_info__about--question Количество вопросов  
+                            span 20
+                          p.modal_info__about.modal_info__about--listen Количество слушателей  
+                            span 30
+                      .modal_about
+                        p.modal_about__description Таким образом реализация намеченных плановых заданий позволяет оценить значение новых предложений.
+                          |Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. 
+                          |Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. 
+                          |Таким образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия...
+                        p.modal_about__link
+                          a(href="#") Подробнее
+                      .modal_documents
+                        .ac-container
+                          .ac-info
+                            input#ac-1(name="accordion-1" type="checkbox")
+                            label(for="ac-1") Тематический план (23)
+                            article.ac-small
+                              table
+                                tbody
+                                tr
+                                  th №,П/П
+                                  th Наименование, описание
+                                  th Часов
+                                each item in ac1
+                                  tr
+                                    td=item.number
+                                    td=item.descr
+                                    td=item.hour
+
+                        .ac-container.ac-container--document
+                          .ac-info
+                            input#ac-2(name="accordion-1" type="checkbox")
+                            label(for="ac-2") Документы (30)
+                              article.ac-small
+                                table
+                                  tbody
+                                  tr
+                                    th №,П/П
+                                    th Наименование, описание
+                                    th Часов
+                                  each item in ac1
+                                    tr
+                                      td=item.number
+                                      td=item.descr
+                                      td=item.hour
+                        .modal_price
+                          p.modal_price__info 2000 руб.
+                          button.modal_price__button Заказать
+                  h3.professional_title
+                    span Р.2.
+                    |Курсы целевого назначения
+
           .sidebar
             .accordion
               .accordion_list

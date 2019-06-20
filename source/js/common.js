@@ -26,3 +26,14 @@ $(function() {
 $(".card").click(function() {
   $(this).toggleClass("flipped");
 });
+
+function modalOpen() {
+  var modalVisual = document.querySelectorAll(".block");
+  for (var i = 0; i < modalVisual.length; i++)
+    modalVisual[i].style.display = "block";
+}
+function modalClose() {
+  var modalHidden = document.querySelectorAll(".block");
+  for (var i = 0; i < modalHidden.length; i++)
+    modalHidden[i].style.display = "none";
+}
