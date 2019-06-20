@@ -1,0 +1,232 @@
+.cart-container
+	max-width: 800px
+	width: 100%
+	margin: 0 auto
+	display: flex
+	flex-direction: row
+
+	& .cart-offset
+		width: 215px
+		display: flex
+
+	& .cart-content
+		width: calc(100% - 215px)
+		display: flex
+		flex-direction: column
+
+		& .cart-header
+			display: flex
+			width: 100%
+			align-items: center
+			margin-bottom: 55px
+			justify-content: space-between
+
+			& .cart-title
+				font-size: 20px
+				color: #2d5f77
+				text-transform: uppercase
+				position: relative
+				padding-bottom: 15px
+				font-weight: 700
+
+				&:before
+					content: ""
+					position: absolute
+					width: 80%
+					height: 1px
+					background-color: #e5a200
+					top: 100%
+
+			& .cart-downloal-list
+				border-radius: 3px
+				border: 1px solid rgb(229, 162, 0)
+				width: 178px
+				height: 35px
+				color: #000000
+				font-size: 12px
+				text-transform: lowercase
+				background: none
+
+		& .cart-item
+			width: 100%
+			display: flex
+			flex-direction: row
+
+			&__left
+				width: 200px
+				display: flex
+				flex-direction: column
+				padding-right: 10px
+
+				& .cart-item__left-title
+					flex-direction: row
+					display: flex
+					align-items: center
+					margin-bottom: 20px
+
+					& img
+						max-width: 40px
+						width: 100%
+						margin-right: 10px
+					
+					& span
+						width: calc(100% - 50px)
+						font-size: 14px
+						color: #969696
+
+				& .cart-item__left-detail
+					display: flex
+					flex-direction: row
+					width: 100%
+
+					& .left-detail-count
+						display: flex
+						flex-direction: column
+						width: 50%
+						justify-content: center
+						align-items: center
+						border-right: 1px solid #2c5f76
+						padding: 0px 10px
+						box-sizing: border-box
+
+						& .name
+							font-size: 12px
+							color: #000000
+							display: flex
+							margin-bottom: 10px
+						
+						& .count
+							font-size: 20px
+							color: #2c5f76
+							font-weight: 600
+
+				
+					& .left-detail-summ
+						display: flex
+						flex-direction: column
+						width: 50%
+						justify-content: center
+						align-items: center
+						padding: 0px 10px
+						box-sizing: border-box
+
+						& .name
+							font-size: 12px
+							color: #000000
+							display: flex
+							margin-bottom: 10px
+						
+						& .summ
+							font-size: 20px
+							color: #000000
+							font-weight: 600
+
+			&__right
+				width: calc(100% - 200px)
+				border-left: 1px solid #2c5f76
+				position: relative
+
+				&:before
+					content: ""
+					border: 10px solid transparent
+					border-bottom: 10px solid #2c5f76
+					display: block
+					position: absolute
+					left: -30px
+					top: -webkit-calc(100% - 40px)
+					top: calc(100% - 21px)
+					cursor: pointer
+
+				& .info-block:not(:first-child)
+					margin-top: 15px
+					
+				& .info-block
+					border-bottom: 1px solid #2c5f76
+					padding: 0px 0px 15px 15px
+					box-sizing: border-box
+					display: flex
+					flex-direction: row
+					justify-content: space-between
+
+					&__left
+						max-width: 180px
+						width: 100%
+
+						& .title
+							font-size: 12px
+							color: #000000
+
+							& span
+								font-weight: 700
+						
+						& .cart-right-buttons
+							width: 100%
+							display: flex
+							align-items: center
+							flex-direction: row
+
+							& button
+								background-color: transparent
+								border: none
+								display: flex
+								justify-content: center
+								align-items: center
+								padding: 0px
+								margin-right: 7px
+								width: 17px
+								height: 17px
+					&__right
+						display: flex
+						flex-wrap: wrap
+						max-width: 165px
+						width: 100%
+
+						& .price
+							width: 50%
+							display: flex
+							align-items: center
+							justify-content: center
+							border-right: 1px solid #2c5f76
+							flex-direction: column
+
+							& .name
+								font-size: 9px
+							
+							& .price-value
+								font-size: 11px
+								color: #4a7689
+								font-weight: 700
+						
+						& .count
+							width: 50%
+							display: flex
+							align-items: center
+							justify-content: center
+							flex-direction: column
+
+							& .name
+								font-size: 9px
+							
+							& .count-value
+								font-size: 11px
+								color: #4a7689
+								font-weight: 700
+						
+						& .summ
+							width: 100%
+							display: flex
+							align-items: center
+							justify-content: space-between
+							border-top: 1px solid #2c5f76
+							flex-direction: row
+
+							& .name
+								font-size: 9px
+							
+							& .summ-value
+								font-size: 11px
+								color: #4a7689
+								font-weight: 700
+
+
+
