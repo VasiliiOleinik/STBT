@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "ExoTwo-Light";
+    src: url("exo2light.woff2") format('woff2'),
+         url("exo2light.woff") format('woff'),
+         url("exo2light.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ExoTwo-Regular";
+    src: url("exo2.woff2") format('woff2'),
+         url("exo2.woff") format('woff'),
+         url("exo2.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+	font-family: "ExoTwo-Bold";
+	src: url("exo2bold.woff2") format('woff2'),
+		 url("exo2bold.woff") format('woff'),
+		 url("exo2bold.ttf") format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
