@@ -37,3 +37,68 @@ function modalClose() {
   for (var i = 0; i < modalHidden.length; i++)
     modalHidden[i].style.display = "none";
 }
+
+// Cart js
+$(function() {
+  var cartItems = $(".cart-item__right .info-block").length,
+    toggleItemsBtn = $("#hide-show-info-btn");
+  if (cartItems >= 2) {
+    $(".cart-item__right .info-block:not(:eq(0))").addClass("disabled-item");
+    $(".cart-item__right .info-block.disabled-item:not(:eq(0))").hide();
+    toggleItemsBtn.show(300);
+  }
+  toggleItemsBtn.on("click", function() {
+    $(this).toggleClass("clicked");
+    if ($(this).hasClass("clicked")) {
+      $(".cart-item__right .info-block.disabled-item").removeClass(
+        "disabled-item"
+      );
+    } else {
+      $(".cart-item__right .info-block:not(:eq(0))").addClass("disabled-item");
+      $(".cart-item__right .info-block.disabled-item:not(:eq(0))").hide();
+    }
+  });
+
+  $("#cart-upload-file-input").on("change", function() {
+    var fileName = $(this)[0].files[0].name;
+    $(".upload-file-name").text("");
+    $(".upload-file-name").text(fileName);
+  });
+
+  $("#cart-downloal-list-js").on("click", function() {
+    $(".add-users-list-modal").slideDown();
+    if ($(".add-users-list-modal").is(":visible")) {
+      $(document).mouseup(function(e) {
+        var div = $(".add-users-list-modal");
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+          $(".add-users-list-modal").slideUp();
+        }
+      });
+    }
+  });
+  $("#cart-user-js").on("click", function() {
+    $(".users-list-modal").slideDown();
+    if ($(".users-list-modal").is(":visible")) {
+      $(document).mouseup(function(e) {
+        var div = $(".users-list-modal");
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+          $(".users-list-modal").slideUp();
+        }
+      });
+    }
+  });
+  var cartRegHeight = $(".cart-reg-modal").height();
+  $(".cart-reg-modal").css({"top":"calc(50% - " + cartRegHeight / 2 + "px"});
+
+  $("#cart-reg-btn-js").on("click", function() {
+    $(".cart-reg-modal").slideDown();
+    if ($(".cart-reg-modal").is(":visible")) {
+      $(document).mouseup(function(e) {
+        var div = $(".cart-reg-modal");
+        if (!div.is(e.target) && div.has(e.target).length === 0) {
+          $(".cart-reg-modal").slideUp();
+        }
+      });
+    }
+  });
+});

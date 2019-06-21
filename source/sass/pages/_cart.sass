@@ -10,9 +10,10 @@
 		display: flex
 
 	& .cart-content
-		width: calc(100% - 215px)
+		width: calc(100% - 195px)
 		display: flex
 		flex-direction: column
+		position: relative
 
 		& .cart-header
 			display: flex
@@ -27,7 +28,7 @@
 				text-transform: uppercase
 				position: relative
 				padding-bottom: 15px
-				font-weight: 700
+				font-family: "ExoTwo-Bold"
 
 				&:before
 					content: ""
@@ -46,14 +47,16 @@
 				font-size: 12px
 				text-transform: lowercase
 				background: none
+				font-family: "ExoTwo-Regular"
 
 		& .cart-item
 			width: 100%
 			display: flex
 			flex-direction: row
+			margin-bottom: 40px
 
 			&__left
-				width: 200px
+				width: 210px
 				display: flex
 				flex-direction: column
 				padding-right: 10px
@@ -73,6 +76,7 @@
 						width: calc(100% - 50px)
 						font-size: 14px
 						color: #969696
+						font-family: "ExoTwo-Bold"
 
 				& .cart-item__left-detail
 					display: flex
@@ -86,7 +90,7 @@
 						justify-content: center
 						align-items: center
 						border-right: 1px solid #2c5f76
-						padding: 0px 10px
+						padding-right: 10px
 						box-sizing: border-box
 
 						& .name
@@ -94,11 +98,12 @@
 							color: #000000
 							display: flex
 							margin-bottom: 10px
+							font-family: "ExoTwo-Regular"
 						
 						& .count
-							font-size: 20px
+							font-size: 18px
 							color: #2c5f76
-							font-weight: 600
+							font-family: "ExoTwo-Bold"
 
 				
 					& .left-detail-summ
@@ -107,7 +112,7 @@
 						width: 50%
 						justify-content: center
 						align-items: center
-						padding: 0px 10px
+						padding-left: 10px
 						box-sizing: border-box
 
 						& .name
@@ -115,19 +120,19 @@
 							color: #000000
 							display: flex
 							margin-bottom: 10px
+							font-family: "ExoTwo-Regular"
 						
 						& .summ
-							font-size: 20px
+							font-size: 18px
 							color: #000000
-							font-weight: 600
+							font-family: "ExoTwo-Bold"
 
 			&__right
 				width: calc(100% - 200px)
 				border-left: 1px solid #2c5f76
 				position: relative
 
-				&:before
-					content: ""
+				& .hide-show-info-btn
 					border: 10px solid transparent
 					border-bottom: 10px solid #2c5f76
 					display: block
@@ -136,10 +141,26 @@
 					top: -webkit-calc(100% - 40px)
 					top: calc(100% - 21px)
 					cursor: pointer
+					display: none
+					transition: .3s
+					transform: rotate(180deg)
+					transform-origin: center center
+				
+				& .hide-show-info-btn.clicked
+					transform: rotate(0deg)
+					transform-origin: center center
+					transition: .3s
 
 				& .info-block:not(:first-child)
 					margin-top: 15px
-					
+
+				& .info-block.disabled-item
+					height: 38px
+					overflow: hidden
+					border-bottom: 1px solid transparent
+					transition: .3s
+					opacity: .2 
+
 				& .info-block
 					border-bottom: 1px solid #2c5f76
 					padding: 0px 0px 15px 15px
@@ -147,6 +168,8 @@
 					display: flex
 					flex-direction: row
 					justify-content: space-between
+					transition: .3s
+					opacity: 1
 
 					&__left
 						max-width: 180px
@@ -155,9 +178,10 @@
 						& .title
 							font-size: 12px
 							color: #000000
+							font-family: "ExoTwo-Regular"
 
 							& span
-								font-weight: 700
+								font-family: "ExoTwo-Bold"
 						
 						& .cart-right-buttons
 							width: 100%
@@ -175,6 +199,7 @@
 								margin-right: 7px
 								width: 17px
 								height: 17px
+
 					&__right
 						display: flex
 						flex-wrap: wrap
@@ -191,11 +216,13 @@
 
 							& .name
 								font-size: 9px
+								font-family: "ExoTwo-Regular"
 							
 							& .price-value
 								font-size: 11px
 								color: #4a7689
 								font-weight: 700
+								font-family: "ExoTwo-Bold"
 						
 						& .count
 							width: 50%
@@ -206,11 +233,12 @@
 
 							& .name
 								font-size: 9px
+								font-family: "ExoTwo-Regular"
 							
 							& .count-value
 								font-size: 11px
 								color: #4a7689
-								font-weight: 700
+								font-family: "ExoTwo-Bold"
 						
 						& .summ
 							width: 100%
@@ -222,11 +250,360 @@
 
 							& .name
 								font-size: 9px
+								font-family: "ExoTwo-Regular"
 							
 							& .summ-value
 								font-size: 11px
 								color: #4a7689
-								font-weight: 700
+								font-family: "ExoTwo-Bold"
+		& .cart-footer
+			display: flex
+			width: 100%
+			flex-direction: row
+			border-top: 1px solid #2c5f76
+			padding-top: 10px
+			position: relative
 
+			& .cart-total
+				width: 210px
+				display: flex
+				justify-content: flex-end
+				flex-direction: column
+				align-items: flex-end
 
+				& .cart-total-info
+					display: flex
+					align-items: center
+					justify-content: center
+					flex-direction: column
 
+					& .name
+						color: #000000
+						font-size: 12px
+						font-family: "ExoTwo-Regular"
+					
+					& .total
+						color: #2c5f76
+						font-size: 25px
+						font-family: "ExoTwo-Bold"
+
+			& .cart-reg
+				width: calc(100% - 210px)
+				display: flex
+				justify-content: flex-end
+				align-items: center
+
+				& .cart-reg-btn
+					border-radius: 3px
+					border: 1px solid #e5a200
+					width: 178px
+					height: 35px
+					color: #000000
+					font-size: 12px
+					text-transform: lowercase
+					background: none
+					font-family: "ExoTwo-Regular"
+
+.add-users-list-modal
+	position: absolute
+	z-index: 2
+	top: 0
+	left: 0
+	width: 100%
+	padding: 35px 50px 25px 50px
+	background-color: #ffffff
+	box-shadow: 0px 0px 19px 18px rgba(19, 19, 20, .1)
+	box-sizing: border-box
+	display: none
+
+	& .modal-title
+		color: #2d5f77
+		font-size: 16px
+		font-family: "ExoTwo-Bold"
+		text-transform: uppercase
+		margin-bottom: 30px
+
+	& .company-name
+		width: 140px
+		height: 18px
+		border: 1px solid #2c5f76
+		font-size: 12px
+		color: #5a5858
+		font-family: "ExoTwo-Light"
+		padding: 0px 5px
+		margin-bottom: 20px
+
+	& .label-add-via-file
+		width: 100%
+		margin-bottom: 25px
+
+		& .label-file-title
+			font-size: 12px
+			color: #000000
+			font-family: "ExoTwo-Light"
+			display: flex
+			margin-bottom: 5px
+		
+		& .file-block
+			width: 100%
+			height: auto
+			border: 1px solid #2c5f76
+			padding: 10px
+			box-siing: border-box
+			display: flex
+			flex-direction: row
+
+			& .file-description 
+				display: flex
+				width: 240px
+				font-size: 10px
+				color: #5a5858
+				font-family: "ExoTwo-Light"
+			
+			& .upload-file
+				width: 240px
+				display: flex
+				align-items: center
+				justify-content: center
+
+				& label
+					& input 
+						display: none
+					
+					& .upload-file-name
+						color: #e9b334
+						font-size: 12px
+						font-family: "ExoTwo-Light"
+						cursor: pointer
+						text-decoration: underline
+
+	& .label-add-by-hand
+			
+		& .label-hand-title
+			font-size: 12px
+			color: #000000
+			font-family: "ExoTwo-Light"
+			display: flex
+			margin-bottom: 5px
+
+		& .add-by-hand-inputs
+			display: flex
+			flex-wrap: wrap
+			justify-content: flex-end
+			margin-bottom: 15px
+
+			& .add-by-hand-input
+				width: 125px
+				height: 18px
+				border: 1px solid #2c5f76
+				font-size: 12px
+				color: #5a5858
+				font-family: "ExoTwo-Light"
+				padding: 0px 5px
+				margin-bottom: 10px
+				margin-left: 20px
+			
+			& .add-by-hand-input.number
+				width: 50px
+				margin-left: 0px
+
+		& .label-add-btn
+			width: 100%
+			display: flex
+			justify-content: flex-end
+			align-items: center
+
+			& label
+				width: 125px
+				display: flex
+				justify-content: flex-start
+				align-items: center
+				position: relative
+				cursor: pointer
+
+				& .label-add-checkbox
+					display: none
+				
+				& .label-add-checkbox-custom
+					position: relative
+					width: 10px 
+					height: 10px
+					border: 1px solid #2c5f76
+					display: flex
+					margin-right: 5px
+					transition: .3s
+
+				& .text
+					font-family: "ExoTwo-Light"
+					font-size: 12px
+					color: #000000
+
+					&:after
+						content: ""
+						display: block
+						width: 15px
+						height: 15px
+						background-image: url("../img/cart-add-ico.png")
+						background-position: center center
+						background-repeat: no-repeat
+						position: absolute
+						right: 0
+						top: calc(50% - 7.5px)
+
+				& .label-add-checkbox:checked + .label-add-checkbox-custom:before
+					content: ""
+					display: block
+					position: absolute
+					top: 0px 
+					right: 0px
+					bottom: 0px
+					left: 0px
+					background: #e5a200
+					transition: .3s
+.users-list-modal
+	position: absolute
+	z-index: 2
+	top: 0
+	left: 0
+	width: 100%
+	padding: 35px 50px 25px 50px
+	background-color: #ffffff
+	box-shadow: 0px 0px 19px 18px rgba(19, 19, 20, .1)
+	box-sizing: border-box
+	display: none
+
+	& .modal-title
+		color: #2d5f77
+		font-size: 16px
+		font-family: "ExoTwo-Bold"
+		text-transform: uppercase
+		margin-bottom: 30px
+
+	& .users-list-modal-inputs
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: 15px
+
+		& .users-list-modal-input
+			width: 140px
+			height: 18px
+			border: 1px solid #2c5f76
+			font-size: 12px
+			color: #5a5858
+			font-family: "ExoTwo-Light"
+			padding: 0px 5px
+			margin-bottom: 10px
+			margin-right: 20px
+
+			& .users-list-modal-input:nth-of-type(3n)
+				margin-right: 0px
+
+		& .users-list-modal-input.half
+			width: 225px
+			margin-left: 0px
+			
+	& .users-list-modal-add-btn
+		cursor: pointer
+
+.cart-reg-modal
+	position: absolute
+	z-index: 2
+	top: 0
+	left: 0
+	width: 100%
+	padding: 35px 50px 25px 50px
+	background-color: #ffffff
+	box-shadow: 0px 0px 19px 18px rgba(19, 19, 20, .1)
+	box-sizing: border-box
+	display: none
+
+	& .modal-title
+		color: #2d5f77
+		font-size: 16px
+		font-family: "ExoTwo-Bold"
+		text-transform: uppercase
+		margin-bottom: 30px
+
+	& .cart-reg-modal-inputs
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-bottom: 15px
+
+		& .cart-reg-modal-input
+			width: 140px
+			height: 18px
+			border: 1px solid #2c5f76
+			font-size: 12px
+			color: #5a5858
+			font-family: "ExoTwo-Light"
+			padding: 0px 5px
+			margin-bottom: 10px
+			margin-right: 25px
+
+			&:nth-of-type(3n)
+				margin-right: 0px
+
+	& .cart-reg-modal-checkbox
+		width: 100%
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		margin-bottom: 25px
+
+	& label
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		position: relative
+		cursor: pointer
+		margin-right: 50px
+
+		& .cart-reg-checkbox
+			display: none
+		
+		& .cart-reg-checkbox-custom
+			position: relative
+			width: 10px 
+			height: 10px
+			border: 1px solid #2c5f76
+			display: flex
+			margin-right: 5px
+			transition: .3s
+
+		& .text
+			font-family: "ExoTwo-Light"
+			font-size: 12px
+			color: #000000
+
+		& .cart-reg-checkbox:checked + .cart-reg-checkbox-custom:before
+			content: ""
+			display: block
+			position: absolute
+			top: 0px 
+			right: 0px
+			bottom: 0px
+			left: 0px
+			background: #e5a200
+			transition: .3s
+
+	& .cart-reg-modal-footer
+		display: flex
+		flex-direction: row
+		justify-content: space-between
+		align-items: center
+
+		& label
+			margin: 0px
+
+		& .cart-reg-send-btn
+			border-radius: 3px
+			border: 1px solid #e5a200
+			width: 178px
+			height: 35px
+			color: #000000
+			font-size: 12px
+			text-transform: lowercase
+			background: none
+			font-family: "ExoTwo-Regular"

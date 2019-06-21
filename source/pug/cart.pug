@@ -8,7 +8,46 @@ append content
 				.cart-header
 					h1.cart-title Козина
 					button.cart-downloal-list(id="cart-downloal-list-js" ) Загрузить список учащихся
-
+					.add-users-list-modal
+						h2.modal-title Загрузить список учащихся
+						input.company-name(type="text" placeholder="Название компании")
+						.label-add-via-file
+							span.label-file-title Вы можете внести учащихся вручную или загрузить через файл
+							.file-block
+								span.file-description 
+									|Описание стандартов файла и ссылка на пример 
+									|файл Описание стандартов файла и ссылка на 
+									|пример файл Описание стандартов файла и ссылка 
+									|на пример файл Описание стандартов файла и 
+								.upload-file
+									label 
+										span.upload-file-name загрузить через файл
+										input(id="cart-upload-file-input" name="uses-via-file" type="file")
+						.label-add-by-hand
+							span.label-hand-title Внести учащихся вручную
+							.add-by-hand-inputs
+								input(class="add-by-hand-input number" name="number" type="text" placeholder="Номер")
+								input(class="add-by-hand-input" name="surname" type="text" placeholder="Фамилия")
+								input(class="add-by-hand-input" name="name" type="text" placeholder="Имя")
+								input(class="add-by-hand-input" name="second-name" type="text" placeholder="Отчество")
+								input(class="add-by-hand-input" name="position" type="text" placeholder="Должность")
+								input(class="add-by-hand-input" name="company" type="text" placeholder="Компания")
+								input(class="add-by-hand-input" name="subdivision" type="text" placeholder="Подразделение")
+							.label-add-btn
+								label
+									input(class="label-add-checkbox" type="checkbox")
+									span.label-add-checkbox-custom
+									span.text добавить
+					.users-list-modal
+						h2.modal-title Список учащихся
+						.users-list-modal-inputs
+							input(class="users-list-modal-input" name="surname" type="text" placeholder="Фамилия")
+							input(class="users-list-modal-input" name="name" type="text" placeholder="Имя")
+							input(class="users-list-modal-input" name="second-name" type="text" placeholder="Отчество")
+							input(class="users-list-modal-input half" name="position" type="text" placeholder="Должность")
+							input(class="users-list-modal-input half" name="company" type="text" placeholder="Компания")
+						.users-list-modal-add-btn(id="users-list-modal-add-btn-js")
+							img(src="../img/cart-add-ico.png", alt="")
 				.cart-item
 					.cart-item__left
 						.cart-item__left-title
@@ -19,75 +58,110 @@ append content
 								span.name Количество
 								span.count 444
 							.left-detail-summ
-								span.name Количество
+								span.name сумма / руб.
 								span.summ 4 444 444
 					.cart-item__right
-						.info-block
-							.info-block__left
-								p.title
-									span Р.2.16. 
-									|Подготовка персонала на допуск к производству работ в охранной зоне магистральных газопроводов
-								.cart-right-buttons
-									button.cart-right-buttons__show(id="cart-show" title="Show")
-										img(src="../img/cart-show.png", alt="")
-									button.cart-right-buttons__user(id="cart-user" title="User")
-										img(src="../img/cart-user.png", alt="")
-									button.cart-right-buttons__close(id="cart-close" title="Close")
-										img(src="../img/cart-close.png", alt="")
-							.info-block__right
-								.price
-									span.name цена / руб.
-									span.price-value 2800
-								.count
-									span.name Количество
-									span.price-value 2800
-								.summ
-									span.name сумма
-									span.summ-value 2 800 000
-									span.currency руб.
-						.info-block
-							.info-block__left
-								p.title
-									span Р.2.16. 
-									|Подготовка персонала на допуск к производству работ в охранной зоне магистральных газопроводов
-								.cart-right-buttons
-									button.cart-right-buttons__show(id="cart-show" title="Show")
-										img(src="../img/cart-show.png", alt="")
-									button.cart-right-buttons__user(id="cart-user" title="User")
-										img(src="../img/cart-user.png", alt="")
-									button.cart-right-buttons__close(id="cart-close" title="Close")
-										img(src="../img/cart-close.png", alt="")
-							.info-block__right
-								.price
-									span.name цена / руб.
-									span.price-value 2800
-								.count
-									span.name Количество
-									span.price-value 2800
-								.summ
-									span.name сумма
-									span.summ-value 2 800 000
-									span.currency руб.
-						.info-block
-							.info-block__left
-								p.title
-									span Р.2.16. 
-									|Подготовка персонала на допуск к производству работ в охранной зоне магистральных газопроводов
-								.cart-right-buttons
-									button.cart-right-buttons__show(id="cart-show" title="Show")
-										img(src="../img/cart-show.png", alt="")
-									button.cart-right-buttons__user(id="cart-user" title="User")
-										img(src="../img/cart-user.png", alt="")
-									button.cart-right-buttons__close(id="cart-close" title="Close")
-										img(src="../img/cart-close.png", alt="")
-							.info-block__right
-								.price
-									span.name цена / руб.
-									span.price-value 2800
-								.count
-									span.name Количество
-									span.price-value 2800
-								.summ
-									span.name сумма
-									span.summ-value 2 800 000
-									span.currency руб.
+						#hide-show-info-btn(class="hide-show-info-btn")
+						.info-blocks-container
+							.info-block
+								.info-block__left
+									p.title
+										span Р.2.16. 
+										|Подготовка персонала на допуск к производству работ в охранной зоне магистральных газопроводов
+									.cart-right-buttons
+										button.cart-right-buttons__show(id="cart-show-js" title="Show")
+											img(src="../img/cart-show.png", alt="")
+										button.cart-right-buttons__user(id="cart-user-js" title="User")
+											img(src="../img/cart-user.png", alt="")
+										button.cart-right-buttons__close(id="cart-close-js" title="Close")
+											img(src="../img/cart-close.png", alt="")
+								.info-block__right
+									.price
+										span.name цена / руб.
+										span.price-value 2800
+									.count
+										span.name Количество
+										span.count-value 2800
+									.summ
+										span.name сумма
+										span.summ-value 2 800 000
+										span.currency руб.
+							.info-block
+								.info-block__left
+									p.title
+										span Р.2.16. 
+										|Подготовка персонала на допуск к производству работ в охранной зоне магистральных газопроводов
+									.cart-right-buttons
+										button.cart-right-buttons__show(id="cart-show-js" title="Show")
+											img(src="../img/cart-show.png", alt="")
+										button.cart-right-buttons__user(id="cart-user-js" title="User")
+											img(src="../img/cart-user.png", alt="")
+										button.cart-right-buttons__close(id="cart-close-js" title="Close")
+											img(src="../img/cart-close.png", alt="")
+								.info-block__right
+									.price
+										span.name цена / руб.
+										span.price-value 2800
+									.count
+										span.name Количество
+										span.count-value 2800
+									.summ
+										span.name сумма
+										span.summ-value 2 800 000
+										span.currency руб.
+							.info-block
+								.info-block__left
+									p.title
+										span Р.2.16. 
+										|Подготовка персонала на допуск к производству работ в охранной зоне магистральных газопроводов
+									.cart-right-buttons
+										button.cart-right-buttons__show(id="cart-show-js" title="Show")
+											img(src="../img/cart-show.png", alt="")
+										button.cart-right-buttons__user(id="cart-user-js" title="User")
+											img(src="../img/cart-user.png", alt="")
+										button.cart-right-buttons__close(id="cart-close-js" title="Close")
+											img(src="../img/cart-close.png", alt="")
+								.info-block__right
+									.price
+										span.name цена / руб.
+										span.price-value 2800
+									.count
+										span.name Количество
+										span.count-value 2800
+									.summ
+										span.name сумма
+										span.summ-value 2 800 000
+										span.currency руб.
+				.cart-footer
+					.cart-reg-modal
+						h2.modal-title Регистрация
+						.cart-reg-modal-checkbox
+							label
+								input(class="cart-reg-checkbox" type="checkbox")
+								span.cart-reg-checkbox-custom
+								span.text Физическое лицо
+							label
+								input(class="cart-reg-checkbox" type="checkbox")
+								span.cart-reg-checkbox-custom
+								span.text Юридическое лицо
+						.cart-reg-modal-inputs
+							input(class="cart-reg-modal-input" type="text" placeholder="Название компании")
+							input(class="cart-reg-modal-input" type="text" placeholder="Название компании")
+							input(class="cart-reg-modal-input" type="text" placeholder="Название компании")
+							input(class="cart-reg-modal-input" type="text" placeholder="Название компании")
+							input(class="cart-reg-modal-input" type="text" placeholder="Название компании")
+							input(class="cart-reg-modal-input" type="text" placeholder="Название компании")
+							input(class="cart-reg-modal-input" type="text" placeholder="Название компании")
+						.cart-reg-modal-footer
+							label.personal-data-proc
+								input(class="cart-reg-checkbox" type="checkbox")
+								span.cart-reg-checkbox-custom
+								span.text Согласен на обработку персональных данных
+							button.cart-reg-send-btn Отправить
+							
+					.cart-total
+						.cart-total-info
+							span.name сумма/руб.
+							span.total 2 800 000
+					.cart-reg
+						button.cart-reg-btn(id="cart-reg-btn-js") Регистрация
